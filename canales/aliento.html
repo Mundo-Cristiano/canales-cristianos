@@ -8,7 +8,7 @@
     <title>HLS Player (M3U8)</title>
 </head>
 <body style="margin:0;background-color: black;">
-    <video disablepictureinpicture style="position:absolute;height:100%;width:100%;display:block;object-fit:scale-down" 
+    <video disablepictureinpicture style="position:absolute;height:100%;width:100%;display:block" 
     controls="controls" 
     autoplay="autoplay" 
     controlslist="nodownload" 
@@ -21,7 +21,7 @@
       var hls = new Hls();
       hls.loadSource(source);
       hls.attachMedia(document.querySelector("video"));
-    })("https://1-94-11554-1.b.cdn13.com/LiveHTTPOrigin/live/chunklist.m3u8");
+    })("");
   </script>
 </body>
 </html>
