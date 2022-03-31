@@ -4,24 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="hls.min.js" type="application/javascript"></script>
-    <title>HLS Player (M3U8)</title>
+    <title>Pluto-m3u</title>
 </head>
 <body style="margin:0;background-color: black;">
-    <video disablepictureinpicture style="position:absolute;height:100%;width:100%;display:block" 
-    controls="controls" 
-    autoplay="autoplay" 
-    controlslist="nodownload" 
+    
+  <video class="tvhou" width="100%" height="100%"
+    controls="controls" autoplay="autoplay"
+    x-webkit-airplay="true" x5-video-player-fullscreen="true"
+    preload="auto" playsinline="true" webkit-playsinline
+    x5-video-player-typ="h5"
+    style="position:absolute;height:100%;width:100%;display:block;object-fit:scale-down"
     poster="ctni.png">
+    <source type="application/x-mpegURL" src="https://584097344c1f0.streamlock.net/48/48.smil/chunklist_b1564000_sleng.m3u8">
     </video>
-<script>
-    ((source) => {
-      if (typeof Hls == "undefined") return;
-      if (!document.querySelector("video")) return;
-      var hls = new Hls();
-      hls.loadSource(source);
-      hls.attachMedia(document.querySelector("video"));
-    })("https://584097344c1f0.streamlock.net/48/48.smil/chunklist_b1564000_sleng.m3u8");
-  </script>
 </body>
 </html>
